@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .giaodien0 {
+            background: linear-gradient(90deg, #0f172a, #1e293b);
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+            border-radius: 50px;
+        }
+
+        .left {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .center {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+            min-width: 0;
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .center input {
+            width: 100%;
+            max-width: 600px;
+            min-width: 80px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .category {
+            position: relative;
+            color: whitesmoke;
+        }
+
+        .category:hover {
+            color: #38bdf8;
+        }
+
+        .category::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background: #38bdf8;
+            transition: 0.3s;
+        }
+
+        .category:hover::after {
+            width: 100%;
+        }
+
+        .login {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: black;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .login:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #020617;
+            border: 1px solid #334155;
+            border-radius: 30px;
+            padding: 6px 14px;
+            width: 100%;
+            max-width: 550px;
+        }
+
+        .search-icon {
+            margin-right: 6px;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            flex: 1;
+            font-size: 15px;
+        }
+
+        body {
+            background: linear-gradient(90deg, #0f172a, #1e293b);
+        }
+
+        .search-box:focus-within {
+            box-shadow: 0 0 10px #38bdf8;
+        }
+
+        .gamelist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .game {
+            background: #020617;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .game img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        .game button {
+            margin-top: 8px;
+            padding: 5px 12px;
+            border: none;
+            border-radius: 15px;
+            background: #22c55e;
+            cursor: pointer;
+        }
+
+        .game button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #22c55e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="giaodien0">
+
+        <div class="left">
+            <img src="istockphoto-1282474408-170667a.jpg" class="logo">
+            <div class="category">Thể loại</div>
+        </div>
+
+        <div class="center">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+        </div>
+
+        <div class="right">
+            <a href="baitapform.html" class="login">Đăng nhập</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="gamelist">
+
+        <div class="game">
+            <img src="game1.jpg">
+            <h4>Game 1</h4>
+            <button>Tải</button>
+        </div>
+
+        <div class="game">
+            <img src="game2.jpg">
+            <h4>Game 2</h4>
+            <button>Tải</button>
+        </div>
+
+        <div class="game">
+            <img src="game3.jpg">
+            <h4>Game 3</h4>
+            <button>Tải</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
