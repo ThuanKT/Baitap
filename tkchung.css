@@ -1,0 +1,37 @@
+.searching .game-item, 
+.searching .game-card {
+    display: flex !important;
+    flex-direction: column !important; /* Xếp chồng: Ảnh trên, Chữ dưới */
+    height: auto !important; /* Cho phép dãn theo nội dung */
+    min-height: 200px !important;
+    background: #1e293b !important;
+    border-radius: 8px !important;
+    overflow: visible !important; /* Không cắt cụt nội dung */
+}
+
+/* Đảm bảo ảnh luôn ở trên cùng và không bị méo */
+.searching .card-header {
+    width: 100% !important;
+    order: -1 !important; 
+    overflow: hidden !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+/* HIỆN LẠI CÁC THÀNH PHẦN BỊ ĐÈ/ẨN */
+.searching .game-title,
+.searching .release-date,
+.searching .tags {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin: 5px 10px !important;
+    position: relative !important; /* Đưa về luồng hiển thị bình thường */
+    z-index: 2 !important;
+}
+
+.searching .tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    padding-bottom: 10px !important;
+}

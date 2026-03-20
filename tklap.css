@@ -1,0 +1,8 @@
+@media (min-width: 769px) {
+    .searching .gamelist {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 15px !important;
+    }
+    .searching .card-header { height: 140px !important; }
+}

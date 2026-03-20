@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+    /* 1. HIỂN THỊ TIÊU ĐỀ: Chỉ hiện dòng "ĐỀ XUẤT" đầu tiên */
+    .searching .tieude, .searching h2 { display: none !important; }
+    .searching section:first-of-type .tieude, 
+    .searching section:first-of-type h2 { 
+        display: block !important; 
+        margin: 10px 15px !important;
+    }
+
+    /* 2. CẤU HÌNH GRID: Ép 3 cột và tự động lấp đầy ô trống */
+    .searching .gamelist, 
+    .searching .game-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-auto-flow: dense !important; /* Lấp đầy ô trống bằng các phần tử có order thấp */
+        gap: 8px !important;
+        padding: 5px !important;
+    }
+
+    /* 3. CARD GAME ĐỒNG NHẤT */
+    .searching .game-item, .searching .game-card {
+        width: 100% !important;
+        min-height: 130px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background: #1e293b !important;
+        border-radius: 8px !important;
+        /* Đảm bảo game hiện lên sẽ có thứ tự ưu tiên cao hơn các ô trống */
+        order: 1 !important; 
+    }
+
+    .searching .card-header { height: 70px !important; }
+    .searching .release-date { display: none !important; }
+    
+    /* Tag vuốt ngang */
+    .searching .tags {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 4px !important;
+        padding: 0 5px 8px 5px !important;
+        scrollbar-width: none;
+    }
+    .searching .tags::-webkit-scrollbar { display: none; }
+
+    /* 4. TRIỆT TIÊU Ô TRỐNG: Xóa sổ diện tích của các game không khớp */
+    .searching .game-item[style*="display: none"],
+    .searching .game-card[style*="display: none"] {
+        display: none !important; /* Dùng none để Grid bỏ qua hoàn toàn */
+        position: absolute !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
